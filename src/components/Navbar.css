@@ -1,0 +1,99 @@
+.navbarMain {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 100px;
+    height: 50dvh;
+
+    padding: 20px 0 20px 0;
+
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+
+    /* neumorphism */
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  10px 10px 30px #bebebe,
+             -10px -10px 30px #ffffff;
+}
+
+/* ================================
+   NAVIGATION BUTTON
+================================ */
+
+.nav-item {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #ececec;
+
+    color: #7a7a7a;
+    text-decoration: none;
+
+    box-shadow:
+        -10px -10px 15px rgba(255, 255, 255, 0.5),
+        10px 10px 15px rgba(70, 70, 70, 0.12);
+
+    transition: 
+        color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* ================================
+   ICON
+================================ */
+
+.nav-icon {
+    font-size: 22px;
+}
+
+
+/* ================================
+   HOVER
+================================ */
+
+.nav-item:hover {
+    color: #BDA6CE;
+
+    transform: scale(1.05);
+}
+
+
+/* ================================
+   ACTIVE PAGE
+================================ */
+
+.nav-item.active {
+    color: #9f6ec2;
+
+    box-shadow:
+        -10px -10px 15px rgba(255, 255, 255, 0.5),
+        10px 10px 15px rgba(70, 70, 70, 0.12),
+        inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+        inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+
+    transform: scale(0.98);
+}
+
+.nav-item.active .nav-icon {
+    color: #BDA6CE;
+
+    filter:
+        drop-shadow(0 0 3px #ffffff)
+        drop-shadow(0 0 5px #BDA6CE);
+}
+
