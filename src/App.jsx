@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Home from "./pages/Home/Home.jsx";
-
+import MyWorks from "./pages/myWorks/my-works.jsx";
 
 function App() {
 
@@ -12,6 +12,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Home />
+      <MyWorks />
     </BrowserRouter>
   );
 }

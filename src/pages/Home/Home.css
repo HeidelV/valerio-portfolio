@@ -1,37 +1,50 @@
 .container {
     min-height: 100dvh;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
-.home-text {
+.welcome-texts {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    text-align: center;
 }
 
 .welcome-heading {
     font-family: "Joy", sans-serif;
     font-weight: 400;
-    font-size: 135px;
+    font-size: clamp(60px, 9vw, 135px);
+    line-height: 0.9;
     color: #FFB733;
     text-transform: uppercase;
+    text-align: center;
+    margin: 0;
 }
 
 .job-title {
     font-family: "Start Story", sans-serif;
     font-weight: 400;
-    font-size: 45px;
+    font-size: clamp(25px, 3vw, 45px);
+    line-height: 1;
     color: #424140;
     text-transform: uppercase;
     text-align: center;
+    margin: 20px 0 0;
 }
 
 .graph-paper {
     position: absolute;
-    width: 900px;
+    width: min(900px, 90vw);
+    max-width: 900px;
     opacity: 0.15;
     z-index: 0;
     border-radius: 30%;
