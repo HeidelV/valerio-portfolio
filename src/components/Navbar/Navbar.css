@@ -17,7 +17,7 @@
     box-shadow:
         10px 10px 30px #bebebe,
         -10px -10px 30px #ffffff;
-    z-index: 1000;
+    z-index: 3000;
 }
 
 .nav-item {
@@ -65,7 +65,7 @@
         drop-shadow(0 0 5px #bda6ce);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .navbarMain {
         left: 50%;
         top: auto;

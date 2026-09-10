@@ -54,6 +54,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Notepen";
+    src: url("./assets/fonts/Notepen.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Jackwrite";
+    src: url("./assets/fonts/Jackwrite.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
 html,
 body {
     margin: 0;
@@ -66,6 +80,7 @@ body {
 }
 
 #root {
+    position: relative;
     min-height: calc(100dvh - 40px);
     margin: 20px 65px;
     box-sizing: border-box;

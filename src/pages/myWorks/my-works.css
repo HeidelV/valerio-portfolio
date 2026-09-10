@@ -62,31 +62,40 @@
 
 .image-container {
     width: fit-content;
+    max-width: 100%;
     padding: 15px;
     border: 1px solid rgb(59, 59, 59);
     box-sizing: border-box;
     background-color: #E2DFD2;
+    overflow: hidden;
+}
+
+.comic-project {
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 20px;
 }
 
 .image-container2 {
     position: relative;
-    width: 100%;
-    max-width: 500px;
+    width: 500px;
+    max-width: 100%;
     height: 600px;
 }
 
 .image-container3 {
     width: fit-content;
+    max-width: 100%;
     padding: 15px;
     border: 1px solid rgb(59, 59, 59);
     box-sizing: border-box;
     background-color: #C7D3C0;
+    overflow: hidden;
 }
 
 .project1 {
     display: block;
-    width: 100%;
-    max-width: 600px;
+    width: auto;
+    max-width: 100%;
     height: auto;
     border: 2px solid rgb(59, 59, 59);
     box-sizing: border-box;
@@ -134,7 +143,7 @@
 }
 
 .project-details {
-    font-family: "Hope Take", sans-serif;
+    font-family: "Jackwrite", sans-serif;
     font-weight: 200;
     font-size: 25px;
     margin-bottom: 10px;
@@ -151,6 +160,30 @@
     margin-right: 10px;
 }
 
+.html {
+    background-color: #E8D5FF;
+}
+
+.css {
+    background-color: #CFE8FF;
+}
+
+.bootstrap {
+    background-color: #eec3d5;
+}
+
+.nodejs {
+    background-color: #D7E8C8;
+}
+
+.mysql {
+    background-color: #F5E3B5;
+}
+
+.figma {
+    background-color: #ffbd2e;
+}
+
 .date-span {
     font-family: "Hope Take", sans-serif;
     font-weight: 800;
@@ -164,9 +197,247 @@
     opacity: 0.7;
 }
 
-@media (max-width: 768px) {
+.view-link {
+    font-family: "Chat Favour", sans-serif;
+    font-size: 35px;
+    color: rgb(105, 23, 23);
+    text-decoration: underline;
+}
+
+.learn-more {
+    font-family: "Chat Favour", sans-serif;
+    font-size: 35px;
+    color: rgb(105, 23, 23);
+    text-decoration: underline;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.project-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    z-index: 2000;
+    padding: 80px 200px;
+    background-color: white;
+    box-sizing: border-box;
+    transform-origin: right center;
+    outline: 2px dashed rgba(0, 0, 0, 0.2);
+    outline-offset: -20px;
+}
+
+.go-back {
+    position: relative;
+    z-index: 1;
+    font-family: "Chat Favour", sans-serif;
+    font-size: 30px;
+    color: rgb(105, 23, 23);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.project-page h2 {
+    font-family: "Chat Favour", sans-serif;
+    font-size: 45px;
+    margin: 30px 0 10px;
+}
+
+.project-page p {
+    font-family: "Jackwrite", sans-serif;
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+.project-page.turning {
+    animation: pageTurn 0.8s ease forwards;
+}
+
+.project-name.new-sheet {
+    font-family: "Chat Favour", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 45px;
+    letter-spacing: 2px;
+    background-color: #E2DFD2;
+    padding: 10px;
+}
+
+.liverary-details {
+    font-family: "Jackwrite", sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+    opacity: 0.7;
+}
+
+@keyframes pageTurn {
+    from {
+        transform: rotateY(90deg);
+    }
+
+    to {
+        transform: rotateY(0deg);
+    }
+}
+
+.project-page.closing {
+    animation: pageTurnBack 0.8s ease forwards;
+}
+
+@keyframes pageTurnBack {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(90deg);
+    }
+}
+
+/* Bootstrap Carousel */
+
+#liveraryCarousel .carousel-control-prev,
+#liveraryCarousel .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    background-color: #e0e0e0;
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+#liveraryCarousel .carousel-control-prev {
+    left: 15px;
+}
+
+#liveraryCarousel .carousel-control-next {
+    right: 15px;
+}
+
+#liveraryCarousel .carousel-control-prev-icon,
+#liveraryCarousel .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+#liveraryCarousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 2px solid #000000 !important;
+    background-color: transparent !important;
+    opacity: 1;
+}
+
+#liveraryCarousel .carousel-indicators button.active {
+    background-color: #000000 !important;
+}
+
+/* Toggle Button */
+
+.side-switch {
+    display: flex;
+    width: fit-content;
+    padding: 5px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #E2DFD2;
+}
+
+.side-switch button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    font-family: "Chat Favour", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #424140;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease;
+}
+
+.side-switch button:hover {
+    transform: scale(1.03);
+}
+
+.side-switch button.active {
+    background-color: #424140;
+    color: #E2DFD2;
+}
+
+.side-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0 25px;
+}
+
+.side-header h3 {
+    font-family: "Chat Favour", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+    color: #4e443a;
+}
+
+/* Table for Project Details */
+
+.project-table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    font-family: "Jackwrite", sans-serif;
+    font-size: 22px;
+}
+
+.project-table th,
+.project-table td {
+    padding: 15px 20px;
+    border: 2px solid #000;
+    text-align: left;
+}
+
+.project-table th {
+    width: 30%;
+    font-family: "Chat Favour", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #E2DFD2;
+}
+
+.project-table td {
+    background-color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+    .project-page {
+        padding: 60px 120px;
+    }
+}
+
+@media (max-width: 1000px) {
     .work-container {
-        padding: 20px;
+        padding: 20px 40px 100px;
     }
 
     .projects {
@@ -174,8 +445,66 @@
         gap: 30px;
     }
 
+    .image-container {
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    .image-container2 {
+        max-width: 500px;
+    }
+
+    .image-container3 {
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    .project-name {
+        font-size: 38px;
+    }
+
+    .project-details {
+        font-size: 22px;
+    }
+
+    .project-page {
+        padding: 50px 70px;
+    }
+
+    .project-page h2 {
+        font-size: 38px;
+    }
+
+    .project-page p {
+        font-size: 22px;
+    }
+
+    .go-back {
+        font-size: 26px;
+    }
+
+    .project-name.new-sheet {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-container {
+        padding: 20px 20px 100px;
+    }
+
+    .work-header {
+        font-size: 40px;
+        padding-left: 0;
+    }
+
+    .project-info {
+        grid-template-columns: 90px 1fr;
+    }
+
     .project-name {
         font-size: 32px;
+        letter-spacing: 1px;
     }
 
     .project-details {
@@ -193,5 +522,61 @@
 
     .image-container2 {
         max-width: 100%;
+    }
+
+    .techstack {
+        display: inline-block;
+        font-size: 17px;
+        padding: 8px;
+        margin-right: 5px;
+        margin-bottom: 8px;
+    }
+
+    .date-span,
+    .date-title {
+        font-size: 18px;
+    }
+
+    .side-switch {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .side-switch button {
+        flex: 1;
+        padding: 9px 15px;
+        font-size: 16px;
+    }
+
+    .project-page {
+        padding: 40px 25px;
+    }
+
+    .project-page h2 {
+        font-size: 30px;
+    }
+
+    .project-page p {
+        font-size: 20px;
+    }
+
+    .go-back {
+        font-size: 22px;
+    }
+
+    .project-name.new-sheet {
+        font-size: 28px;
+        padding: 8px;
+    }
+
+    .side-switch {
+        width: 100%;
+        max-width: none;
+    }
+
+    .side-switch button {
+        flex: 1;
+        padding: 9px 10px;
+        font-size: 15px;
     }
 }
