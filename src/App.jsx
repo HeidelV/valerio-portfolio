@@ -1,22 +1,23 @@
-import './App.css'
+import "./App.css";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar.jsx";
+
 import Home from "./pages/Home/Home.jsx";
 import MyWorks from "./pages/myWorks/my-works.jsx";
+
 import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
-
-  return (
-    <BrowserRouter>
-      <Navbar />
-      <Home />
-      <MyWorks />
-      <Footer />
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Navbar />
+            <Home />
+            <MyWorks />
+            <Footer />
+        </BrowserRouter>
+    );
 }
 
-export default App
+export default App;

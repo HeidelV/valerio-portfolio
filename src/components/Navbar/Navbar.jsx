@@ -1,29 +1,30 @@
-import { NavLink } from "react-router-dom";
-
 import "./Navbar.css";
 
-// import icons
 import { FaHouse } from "react-icons/fa6";
-import { BsInfoCircleFill, BsTerminalFill, BsEnvelopeFill } from "react-icons/bs";
+import {
+    BsInfoCircleFill,
+    BsTerminalFill,
+    BsEnvelopeFill
+} from "react-icons/bs";
 
 function Navbar() {
     return (
         <nav className="navbarMain">
-            <NavLink className="nav-item" to="/">
+            <a className="nav-item" href="#home" aria-label="Home">
                 <FaHouse className="nav-icon" />
-            </NavLink>
+            </a>
 
-            <NavLink className="nav-item" to="/about">
+            <a className="nav-item" href="#about" aria-label="About Me">
                 <BsInfoCircleFill className="nav-icon" />
-            </NavLink>
+            </a>
 
-            <NavLink className="nav-item" to="/projects">
+            <a className="nav-item" href="#projects" aria-label="My Works">
                 <BsTerminalFill className="nav-icon" />
-            </NavLink>
+            </a>
 
-            <NavLink className="nav-item" to="/contact">
+            <a className="nav-item" href="#contact" aria-label="Contact">
                 <BsEnvelopeFill className="nav-icon" />
-            </NavLink>
+            </a>
         </nav>
     );
 }

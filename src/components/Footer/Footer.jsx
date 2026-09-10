@@ -3,7 +3,7 @@ import { BsGithub, BsLinkedin, BsEnvelopeFill } from "react-icons/bs";
 
 function Footer() {
     return (
-        <footer className="footer">
+        <footer className="footer" id="contact">
             <div className="footer-content">
                 <div className="footer-contact">
                     <span

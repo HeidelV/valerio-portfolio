@@ -4,7 +4,7 @@ import graphPaper from "../../assets/elements/graph-paper.png";
 
 function Home() {
     return (
-        <div className="container">
+        <div className="container" id = "home">
             <img
                 className="graph-paper"
                 src={graphPaper}

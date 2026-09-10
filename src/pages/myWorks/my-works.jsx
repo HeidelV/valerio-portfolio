@@ -49,7 +49,7 @@ function MyWorks() {
     };
 
     return (
-        <div className="work-container">
+        <div className="work-container" id = "projects">
 
             {!isOpen && (
                 <>
