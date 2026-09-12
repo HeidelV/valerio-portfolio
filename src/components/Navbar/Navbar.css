@@ -12,11 +12,12 @@
     justify-content: space-evenly;
     align-items: center;
     overflow: hidden;
+    border: 2px solid #2b2420;
     border-radius: 50px;
-    background: #e0e0e0;
+    background: #A98B76;
     box-shadow:
-        10px 10px 30px #bebebe,
-        -10px -10px 30px #ffffff;
+        8px 8px 16px rgba(70, 50, 40, 0.18),
+        -8px -8px 16px rgba(255, 245, 235, 0.35);
     z-index: 3000;
 }
 
@@ -26,43 +27,62 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid #2b2420;
+    padding: 0;
     border-radius: 50%;
-    background: #ececec;
-    color: #7a7a7a;
+    background: #A98B76;
+    color: #F4EDE7;
     text-decoration: none;
     box-shadow:
-        -10px -10px 15px rgba(255, 255, 255, 0.5),
-        10px 10px 15px rgba(70, 70, 70, 0.12);
+        5px 5px 10px rgba(70, 50, 40, 0.2),
+        -5px -5px 10px rgba(255, 245, 235, 0.3);
     transition:
         color 0.3s ease,
+        background 0.3s ease,
         box-shadow 0.3s ease,
         transform 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    color: #FFFFFF;
+    transform: scale(1.05);
+    box-shadow:
+        6px 6px 12px rgba(70, 50, 40, 0.22),
+        -6px -6px 12px rgba(255, 245, 235, 0.35);
+}
+
+.nav-item:active {
+    transform: scale(0.98);
+}
+
+.nav-item.active {
+    color: #FFFFFF;
+    background: #B99D89;
+    box-shadow:
+        inset 4px 4px 8px rgba(70, 50, 40, 0.25),
+        inset -4px -4px 8px rgba(255, 245, 235, 0.3);
+    transform: scale(0.98);
 }
 
 .nav-icon {
     font-size: 22px;
+    transition:
+        color 0.3s ease,
+        filter 0.3s ease,
+        transform 0.3s ease;
 }
 
-.nav-item:hover {
-    color: #bda6ce;
-    transform: scale(1.05);
-}
-
-.nav-item.active {
-    color: #9f6ec2;
-    box-shadow:
-        -10px -10px 15px rgba(255, 255, 255, 0.5),
-        10px 10px 15px rgba(70, 70, 70, 0.12),
-        inset -10px -10px 15px rgba(255, 255, 255, 0.5),
-        inset 10px 10px 15px rgba(70, 70, 70, 0.12);
-    transform: scale(0.98);
+.nav-item:hover .nav-icon {
+    transform: scale(1.08);
 }
 
 .nav-item.active .nav-icon {
-    color: #bda6ce;
+    color: #FFFFFF;
     filter:
-        drop-shadow(0 0 3px #ffffff)
-        drop-shadow(0 0 5px #bda6ce);
+        drop-shadow(0 0 3px #FFFFFF)
+        drop-shadow(0 0 6px #E8D5C5);
+    transform: scale(1.08);
 }
 
 @media (max-width: 1000px) {

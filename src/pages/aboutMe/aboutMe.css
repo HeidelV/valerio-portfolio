@@ -7,7 +7,7 @@
     box-sizing: border-box;
 
     background: #ffffff;
-    outline: 2px dashed rgba(0, 0, 0, 0.2);
+    outline: 2px dashed #A98B76;
     outline-offset: -20px;
 
     transform-origin: right center;

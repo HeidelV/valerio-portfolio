@@ -80,6 +80,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100%;
+    background-color: rgb(221, 206, 188) !important;
 }
 
 body {
@@ -87,11 +88,12 @@ body {
 }
 
 #root {
+    background-color: white;
     position: relative;
     min-height: calc(100dvh - 40px);
     margin: 20px 65px;
     box-sizing: border-box;
-    border: 15px solid #e0e0e0;
+    border: 15px solid #A98B76;
     border-radius: 20px;
     overflow: hidden;
 }

@@ -43,9 +43,9 @@
 
 .divider-dotted {
     border: none;
-    border-top: 3px dashed #000000;
+    border-top: 3px dashed #A98B76;
     width: 100%;
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 .projects {
@@ -215,6 +215,7 @@
     cursor: pointer;
 }
 
+/* WHEN LEARN MORE BUTTON IS CLICKED */
 .project-page {
     position: absolute;
     top: 0;
@@ -226,7 +227,7 @@
     background-color: white;
     box-sizing: border-box;
     transform-origin: right center;
-    outline: 2px dashed rgba(0, 0, 0, 0.2);
+    outline: 2px dashed #A98B76;
     outline-offset: -20px;
 }
 

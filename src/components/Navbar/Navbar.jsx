@@ -1,6 +1,7 @@
 import "./Navbar.css";
 
 import { FaHouse } from "react-icons/fa6";
+
 import {
     BsInfoCircleFill,
     BsTerminalFill,
@@ -12,7 +13,7 @@ function Navbar({ onAboutClick, onCloseAbout }) {
         <nav className="navbarMain">
             <a
                 className="nav-item"
-                href="#home"
+                href="/#home"
                 aria-label="Home"
                 onClick={onCloseAbout}
             >
@@ -29,7 +30,7 @@ function Navbar({ onAboutClick, onCloseAbout }) {
 
             <a
                 className="nav-item"
-                href="#projects"
+                href="/#projects"
                 aria-label="My Works"
                 onClick={onCloseAbout}
             >
@@ -38,7 +39,7 @@ function Navbar({ onAboutClick, onCloseAbout }) {
 
             <a
                 className="nav-item"
-                href="#contact"
+                href="/#contact"
                 aria-label="Contact"
                 onClick={onCloseAbout}
             >
