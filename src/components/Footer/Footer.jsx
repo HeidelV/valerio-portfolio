@@ -37,7 +37,7 @@ function Footer() {
                 <div className="footer-divider"></div>
 
                 <div className="footer-bottom">
-                    <span>Designed & built by Heidel</span>
+                    <span>A web dev in the Philippines</span>
                     <span>© 2026 Heidel Berg Valerio</span>
                 </div>
             </div>

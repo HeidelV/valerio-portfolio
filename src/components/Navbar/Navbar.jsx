@@ -7,22 +7,41 @@ import {
     BsEnvelopeFill
 } from "react-icons/bs";
 
-function Navbar() {
+function Navbar({ onAboutClick, onCloseAbout }) {
     return (
         <nav className="navbarMain">
-            <a className="nav-item" href="#home" aria-label="Home">
+            <a
+                className="nav-item"
+                href="#home"
+                aria-label="Home"
+                onClick={onCloseAbout}
+            >
                 <FaHouse className="nav-icon" />
             </a>
 
-            <a className="nav-item" href="#about" aria-label="About Me">
+            <button
+                className="nav-item"
+                aria-label="About Me"
+                onClick={onAboutClick}
+            >
                 <BsInfoCircleFill className="nav-icon" />
-            </a>
+            </button>
 
-            <a className="nav-item" href="#projects" aria-label="My Works">
+            <a
+                className="nav-item"
+                href="#projects"
+                aria-label="My Works"
+                onClick={onCloseAbout}
+            >
                 <BsTerminalFill className="nav-icon" />
             </a>
 
-            <a className="nav-item" href="#contact" aria-label="Contact">
+            <a
+                className="nav-item"
+                href="#contact"
+                aria-label="Contact"
+                onClick={onCloseAbout}
+            >
                 <BsEnvelopeFill className="nav-icon" />
             </a>
         </nav>
