@@ -8,14 +8,23 @@ import {
     BsEnvelopeFill
 } from "react-icons/bs";
 
-function Navbar({ onAboutClick, onCloseAbout }) {
+function Navbar({ onAboutClick, onNavigate }) {
+
+    const handleNavigation = (section) => {
+        onNavigate(section);
+    };
+
     return (
         <nav className="navbarMain">
+
             <a
                 className="nav-item"
                 href="/#home"
                 aria-label="Home"
-                onClick={onCloseAbout}
+                onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation("home");
+                }}
             >
                 <FaHouse className="nav-icon" />
             </a>
@@ -32,7 +41,10 @@ function Navbar({ onAboutClick, onCloseAbout }) {
                 className="nav-item"
                 href="/#projects"
                 aria-label="My Works"
-                onClick={onCloseAbout}
+                onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation("projects");
+                }}
             >
                 <BsTerminalFill className="nav-icon" />
             </a>
@@ -41,10 +53,14 @@ function Navbar({ onAboutClick, onCloseAbout }) {
                 className="nav-item"
                 href="/#contact"
                 aria-label="Contact"
-                onClick={onCloseAbout}
+                onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation("contact");
+                }}
             >
                 <BsEnvelopeFill className="nav-icon" />
             </a>
+
         </nav>
     );
 }

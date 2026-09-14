@@ -1,12 +1,11 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+
 import "./my-works.css";
 
-// Import Images
 import mrBeanCafe from "../../assets/images/mrbean-cafe.png";
 import comicApp1 from "../../assets/images/comic-app1.png";
 import comicApp2 from "../../assets/images/comic-app2.png";
 
-// LIVErary Screenshots: Client Side
 import liveraryClient1 from "../../assets/images/liverary-client1.png";
 import liveraryClient2 from "../../assets/images/liverary-client2.png";
 import liveraryClient3 from "../../assets/images/liverary-client3.png";
@@ -15,42 +14,51 @@ import liveraryClient5 from "../../assets/images/liverary-client5.png";
 import liveraryClient6 from "../../assets/images/liverary-client6.png";
 import liveraryClient7 from "../../assets/images/liverary-client7.png";
 
-// LIVErary Screenshots: Admin Side
 import liveraryAdmin1 from "../../assets/images/liverary-admin1.png";
 import liveraryAdmin2 from "../../assets/images/liverary-admin2.png";
 import liveraryAdmin3 from "../../assets/images/liverary-admin3.png";
 import liveraryAdmin4 from "../../assets/images/liverary-admin4.png";
 import liveraryAdmin5 from "../../assets/images/liverary-admin5.png";
 
-// Import Icons
 import { ImArrowLeft2 } from "react-icons/im";
 
-function MyWorks() {
+function MyWorks({ onCloseReady, onOpenChange }) {
     const [isOpen, setIsOpen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
     const [viewSide, setViewSide] = useState("client");
 
     useEffect(() => {
+        onOpenChange(isOpen);
+    }, [isOpen, onOpenChange]);
+
+    useEffect(() => {
         if (isOpen) {
             window.scrollTo({
                 top: 0,
-                behavior: "smooth",
+                behavior: "smooth"
             });
         }
     }, [isOpen]);
 
-    const handleClose = () => {
+    const handleClose = useCallback((afterClose) => {
         setIsClosing(true);
 
         setTimeout(() => {
             setIsOpen(false);
             setIsClosing(false);
+
+            if (afterClose) {
+                afterClose();
+            }
         }, 800);
-    };
+    }, []);
+
+    useEffect(() => {
+        onCloseReady(handleClose);
+    }, [onCloseReady, handleClose]);
 
     return (
-        <div className="work-container" id = "projects">
-
+        <div className="work-container" id="projects">
             {!isOpen && (
                 <>
                     <div className="header">
@@ -60,7 +68,6 @@ function MyWorks() {
 
                     <hr className="divider2" />
 
-                    {/* PROJECT 1: LIVERARY */}
                     <div className="project-info">
                         <h4 className="date-title">DATE:</h4>
                         <span className="date-span">2023 - NOW</span>
@@ -116,7 +123,6 @@ function MyWorks() {
 
                     <hr className="divider2" />
 
-                    {/* PROJECT 2: COMIC READING APP */}
                     <div className="project-info">
                         <h4 className="date-title">DATE:</h4>
                         <span className="date-span">2025</span>
@@ -172,7 +178,6 @@ function MyWorks() {
 
                     <hr className="divider2" />
 
-                    {/* PROJECT 3: FIGMA DESIGN - MR. BEAN */}
                     <div className="project-info">
                         <h4 className="date-title">DATE:</h4>
                         <span className="date-span">2023</span>
@@ -294,7 +299,7 @@ function MyWorks() {
                             <div className="carousel-indicators">
                                 {Array.from({
                                     length:
-                                        viewSide === "client" ? 7 : 5,
+                                        viewSide === "client" ? 7 : 5
                                 }).map((_, index) => (
                                     <button
                                         key={index}
