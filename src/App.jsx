@@ -2,6 +2,8 @@ import "./App.css";
 
 import { BrowserRouter } from "react-router-dom";
 import { useRef, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
+
 
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Home from "./pages/Home/Home.jsx";
@@ -117,6 +119,7 @@ function App() {
                     <Footer />
                 </>
             )}
+        <Analytics />
         </BrowserRouter>
     );
 }
