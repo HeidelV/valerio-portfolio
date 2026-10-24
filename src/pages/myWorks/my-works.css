@@ -117,6 +117,15 @@
     z-index: 2;
 }
 
+.project4 {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid rgb(59, 59, 59);
+    box-sizing: border-box;
+}
+
 .details-column {
     width: 100%;
 }
@@ -140,6 +149,10 @@
 
 .mr-bean {
     background-color: #C7D3C0;
+}
+
+.camera-store {
+    background-color: #dbcde0;
 }
 
 .project-details {

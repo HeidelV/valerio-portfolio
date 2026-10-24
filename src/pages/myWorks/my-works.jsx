@@ -20,6 +20,8 @@ import liveraryAdmin3 from "../../assets/images/liverary-admin3.png";
 import liveraryAdmin4 from "../../assets/images/liverary-admin4.png";
 import liveraryAdmin5 from "../../assets/images/liverary-admin5.png";
 
+import cameraStore from "../../assets/images/camera-store.png";
+
 import { ImArrowLeft2 } from "react-icons/im";
 
 function MyWorks({ onCloseReady, onOpenChange }) {
@@ -66,6 +68,57 @@ function MyWorks({ onCloseReady, onOpenChange }) {
                         <hr className="divider" />
                     </div>
 
+                    {/* E-COMMERCE WEB DESIGN PROJECT */}
+                    <hr className="divider2" />
+
+                    <div className="project-info">
+                        <h4 className="date-title">DATE:</h4>
+                        <span className="date-span">2026</span>
+                    </div>
+
+                    <hr className="divider-dotted" />
+
+                    <h3 className="project-name camera-store">
+                        E-Commerce Camera Store Web Design
+                    </h3>
+
+                    <hr className="divider3" />
+
+
+                    <div className="projects camera-store-project">
+                        <div>
+                            <div className="image-container">
+                                <img
+                                    className="project4"
+                                    src={cameraStore}
+                                    alt="LIVErary"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className="details-column">
+                                <p className="project-details">
+                                    A Figma e-commerce website design created as part of a company assessment.
+                                </p>
+
+                                <a
+                                    className="view-link"
+                                    href="https://www.figma.com/proto/J6DkMWV1iCVdUc5Zb5i3Er/E-Commerce-Site---Camera-Store?node-id=11-2&p=f&t=4sJQisbPh4OjZziz-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=11%3A2"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    View Here
+                                </a>
+
+                                <hr className="divider3" />
+
+                                <span className="techstack figma">Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {/* LIVERARY PROJECT */}
                     <hr className="divider2" />
 
                     <div className="project-info">
@@ -121,6 +174,7 @@ function MyWorks({ onCloseReady, onOpenChange }) {
                         </div>
                     </div>
 
+                    {/* DIGITAL COMIC READING APP - FIGMA DESIGN */}
                     <hr className="divider2" />
 
                     <div className="project-info">
