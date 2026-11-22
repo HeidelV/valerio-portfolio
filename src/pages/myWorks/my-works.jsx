@@ -21,6 +21,7 @@ import liveraryAdmin4 from "../../assets/images/liverary-admin4.png";
 import liveraryAdmin5 from "../../assets/images/liverary-admin5.png";
 
 import cameraStore from "../../assets/images/camera-store.png";
+import realEstate from "../../assets/images/lp-redesign.png";
 
 import { ImArrowLeft2 } from "react-icons/im";
 
@@ -66,6 +67,59 @@ function MyWorks({ onCloseReady, onOpenChange }) {
                     <div className="header">
                         <h3 className="work-header">My Works</h3>
                         <hr className="divider" />
+                    </div>
+
+                    {/* E-COMMERCE WEB DESIGN PROJECT */}
+                    <hr className="divider2" />
+
+                    <div className="project-info">
+                        <h4 className="date-title">DATE:</h4>
+                        <span className="date-span">2026</span>
+                    </div>
+
+                    <hr className="divider-dotted" />
+
+                    <h3 className="project-name real-estate">
+                        Real Estate Redesign Website
+                    </h3>
+
+                    <hr className="divider3" />
+
+
+                    <div className="projects real-estate-project">
+                        <div>
+                            <div className="image-container">
+                                <img
+                                    className="project4"
+                                    src={realEstate}
+                                    alt="LIVErary"
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className="details-column">
+                                <p className="project-details">
+                                    A Real Estate website redesign created as part of a company assessment.
+                                </p>
+
+                                <a
+                                    className="view-link"
+                                    href="https://marci-metzger-redesign-three.vercel.app/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    View Here
+                                </a>
+
+                                <hr className="divider3" />
+
+                                <span className="techstack html">HTML</span>
+                                <span className="techstack css">CSS</span>
+                                <span className="techstack bootstrap">Bootstrap</span>
+                                <span className="techstack react">React</span>
+                            </div>
+                        </div>
                     </div>
 
                     {/* E-COMMERCE WEB DESIGN PROJECT */}
